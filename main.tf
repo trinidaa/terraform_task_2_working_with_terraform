@@ -36,9 +36,9 @@ resource "azurerm_storage_blob" "terraform_zip" {
 
 data "archive_file" "terraform_code" {
   type        = "zip"
-  source_dir  = "${path.module}/."  # Путь к папке с Terraform кодом
-  output_path = "${path.module}/terraform-code.zip"  # Куда сохранить архив
-  excludes    = [".terraform", "terraform.tfstate", "*.zip", ".github", ".venv", "README.md", ".git", ".idea", "*.*~"]  # Исключаемые файлы
+  source_dir  = "${path.module}/."                                                                                     # Путь к папке с Terraform кодом
+  output_path = "${path.module}/terraform-code.zip"                                                                    # Куда сохранить архив
+  excludes    = [".terraform", "terraform.tfstate", "*.zip", ".github", ".venv", "README.md", ".git", ".idea", "*.*~"] # Исключаемые файлы
 }
 
 
